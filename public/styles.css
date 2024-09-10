@@ -34,7 +34,7 @@ body {
 }
  .btn-primary:hover {
      background-color: #0056b3;
-     border: 1px solid #0056b3;
+     border: 1px solid ##ffa815ad;
 }
  .success-message {
      color: black;
@@ -76,7 +76,7 @@ body {
 }
  .btn-primary:hover {
      background-color: #0056b3;
-     border: 1px solid #0056b3;
+     border: 1px solid ##ffa815ad;
 }
  .success-message {
      color: black;
@@ -127,12 +127,12 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease; 
   border-color: #ccc;
-  background-color: #fff;
+  background-color: ##ff5e00ad;
 }
 
 .form-check:hover {
   background-color: #f0f0f0; 
-  border-color: #333; 
+  border-color: #ff1515ad; 
 }
 
 .form-check-input {
@@ -152,7 +152,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease; 
   border-color: #ccc;
-  background-color: #fff;
+  background-color: #a20014;
 }
 #listOfCommands, #listOfCommandsEvent, #prefixOfCommands, #adminOfCommands {
   border: none !important;
@@ -205,10 +205,10 @@ lt {
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease; 
   border-color: #ccc;
-  background-color: #fff;
+  background-color: ##ff5e00ad;
 }
 
 .form-check:hover {
   background-color: #f0f0f0; 
-  border-color: #333; 
+  border-color: #ff1515ad; 
 }
