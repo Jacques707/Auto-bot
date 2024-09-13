@@ -1,97 +1,89 @@
-<!DOCTYPE html>
+<!DOCT<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title> 🌹𝐈𝐘𝐀𝐒 𝐀𝐔𝐓𝐎𝐁𝐎𝐓🌹 </title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="styles.css">
-   </head>
-   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-         <a class="navbar-brand" href="#" style="color: lightblue; font-size: 20px;"><b>🔥𝐈𝐘𝐀𝐒 𝐀𝐔𝐓𝐎𝐁𝐎𝐓🔥</b></a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="margin-right: 70px;">
-            <ul class="navbar-nav">
-               <li class="nav-item active">
-                  <a class="nav-link" href="/"><b>𝐀𝐜𝐜𝐞𝐮𝐥</b><span class="sr-only">(current)</span>
-                  </a>
-               </li>
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fonctionnalités</a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <a class="dropdown-item" href="#">Extracteur de Cookie</a>
-                     <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" href="/step_by_step_guide">Guide Etapes-par-Etapes</a>
-                  </div>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="online_user">Bots Actifs</a>
-               </li>
-            </ul>
-         </div>
-      </nav>
-      <div>
-         <form id="json-form" onsubmit="submitForm(event)">
-            <div class="row">
-               <div class="col-md-12">
-                  <textarea id="json-data" class="form-control centered-textarea center-placeholder" placeholder="Coller votre Cookie ici..."></textarea>
-               </div>
-            </div>
-         </form>
+   <head>
+      <title>𝐀𝐔𝐓𝐎𝐁𝐎𝐓 𝐁𝐘 𝐈𝐘𝐀𝐒 -</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="#">𝐈𝐘𝐀𝐒 𝐀𝐔𝐓𝐎𝐁𝐎𝐓▪ </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="margin-right: 70px;">
+            <ul class="navbar-nav">
+               <li class="nav-item active">
+                  <a class="nav-link" href="/">HOME[💬] <span class="sr-only">(current)</span>
+                  </a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Features </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="#">Cookies Extractor</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="/step_by_step_guide">Step-by-Step Guide</a>
+                  </div>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="online_user">Active</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container">
+         <h1 class="col text-center" style="font-size: 20px; padding: 10px;">𝗙𝗕-𝗦𝗧𝗔𝗧𝗘</h1>
+         <form id="json-form" onsubmit="submitForm(event)">
+            <div class="row">
+               <div class="col-md-12">
+                  <textarea id="json-data" class="form-control centered-textarea center-placeholder" placeholder=""></textarea>
+               </div>
+            </div>
+         </form>
+         <p style=" margin-top: 10px">Greetings! Begin by entering your cookie. Scroll down to carefully review our Terms and Privacy.</p>
       </div>
-      <div class="container">
-       <h1 class="col text-center" style="font-size: 33px; padding: 10px;"><b>𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬 𝐝𝐮 𝐛𝐨𝐭 </b></h1>
-      </div> 
-         <div class="container" id="listOfCommands">
-            <h1 style="font-size: 18px; padding: 10px;"> <b>𝐂𝐡𝐨𝐢𝐬𝐢𝐬𝐬𝐞𝐳 𝐥𝐞𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬 𝐝𝐞 𝐯𝐨𝐭𝐫𝐞 𝐛𝐨𝐭 : </b> </h1>
-            <button class="btn btn-primary" onclick="selectAllCommands()">Sélectionner toutes les commandes</button>
-         </div>
-         <div class="container" id="listOfCommandsEvent">
-            <h1 style="font-size: 18px; padding: 10px;"><b>Choisissez vos commandes event : </b></h1>
-            <button class="btn btn-primary" onclick="selectAllEvents()">Sélectionner toutes les commandes</button>
-         </div>
-         <div class="container" id="prefixOfCommands">
-            <h1 style="font-size: 18px; padding: 10px;"><b>Veuillez entrer un Prefix (facultatif) : </b></h1>
-            <input type="text" id="inputOfPrefix" placeholder="Votre Prefix...">
-         </div>
-         <div class="container" id="adminOfCommands">
-            <h1 style="font-size: 18px; padding: 10px;"><b>Veuillez fournir un Uid (facultatif) : </b></h1>
-            <input type="text" id="inputOfAdmin" placeholder="Votre UID...">
-         </div>
-         <label style="font-size: 14px; display: flex; align-items: center; padding: 22px;">
-         <input type="checkbox" id="agreeCheckbox" style="margin-right: 10px;"> Cocher cette case certifie que j'ai lu, compris et accepté les conditions générales. </label>
-         <div class="col text-center">
-            <button class="btn btn-primary" onclick="State()" disabled id="submitButton" style="width: 100%">Soumettre</button>
-         </div>
-      
-          <div class="container">
-         <h1 class="col text-center" style="font-size: 20px; padding: 10px;">Conditions générales et politique de confidentialité</h1>
-         <p align="center">Lors du déploiement ou de la connexion, votre connexion chatbot reste active sauf si vous accédez personnellement au compte du bot ou modifiez le mot de passe. Cette mesure est en place pour garantir le fonctionnement fluide et la sécurité du chatbot.</p>
-         <p align="center">Soyez prudent et évitez de partager  cookie avec des tiers. Votre cookie contient des informations sensibles cruciales pour la confidentialité et la sécurité de votre compte et du chatbot connecté.</p>
-         <p align="center">En tant que fournisseur de services, nous déclinons toute responsabilité en cas d'accès non autorisé à un compte. Il est fortement conseillé aux utilisateurs de mettre en œuvre les meilleures pratiques de sécurité, notamment l'utilisation de mots de passe robustes et uniques, pour protéger leurs comptes.</p>
-         <p align="center">L'accès au compte du bot peut entraîner une interruption du service. Il est fortement recommandé de ne pas tenter d'accéder au compte du bot afin de maintenir la fonctionnalité continue du chatbot.</p> 
-         <p align="center">Si le chatbot ne répond pas, veuillez revenir sur ce site Web. Si les problèmes persistent, envisagez de modifier le compte pour garantir un service ininterrompu.</p> 
-         <p align="center">En tant que fournisseur de services, nous déclinons toute responsabilité en cas de blocage ou de suspension de compte sur le compte fourni. Les utilisateurs doivent respecter les conditions d'utilisation de la plateforme d'hébergement.</p> 
-         <p align="center">Pour plus de sécurité, il est fortement recommandé d'utiliser des comptes factices ou jetables lors de la création du chatbot.</p> 
-         <p align="center">Il est strictement interdit aux utilisateurs d'utiliser le chatbot pour des activités malveillantes. La violation de cette règle peut entraîner la résiliation de l'accès au chatbot et peut avoir des conséquences juridiques.</p>        
-      </div>
-      <div id="result" class="container text-center" style="display: none;"></div>
-      <div class="footer">
-         <p>Temps: <span id="time"></span>
-         </p>
-         <p>Vitesse: <span id="ping"></span>
-         </p>
+      <div class="container">
+         <h1 class="col text-center" style="font-size: 20px; padding: 10px;">𝗔𝗗𝗠𝗜𝗡 𝗜𝗡𝗙𝗢</h1>
+       <img width="235" height="290" src='https://i.imgur.com/NVVGu5f.jpeg' alt="le prorio du Compte">
+<a href="https://www.facebook.com/profile.php?id=100094708460091" target="_blank">
+   <button type="button">𝗣𝗥𝗢𝗙𝗜𝗟 </button>
+</a>
+         <div class="container" id="listOfCommands">
+            <h1 style="font-size: 16px; padding: 10px;">𝗖𝗛𝗢𝗢𝗦𝗘 𝗧𝗛𝗘 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝘀</h1>
+            <button class="btn btn-primary" onclick="selectAllCommands()">Select all commands</button>
+         </div>
+         <div class="container" id="listOfCommandsEvent">
+            <h1 style="font-size: 16px; padding: 10px;">𝗘𝗩𝗘𝗡𝗧 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝘀</h1>
+            <button class="btn btn-primary" onclick="selectAllEvents()">Select all events</button>
+         </div>
+         <div class="container" id="prefixOfCommands">
+            <h1 style="font-size: 16px; padding: 10px;">𝗖𝗛𝗢𝗢𝗦𝗘 𝗬𝗢𝗨𝗥 𝗣𝗥𝗘𝗙𝗜𝗫  'non-prefix' will be considered as your input</h1>
+            <input type="text" id="inputOfPrefix">
+         </div>
+         <div class="container" id="adminOfCommands">
+            <h1 style="font-size: 16px; padding: 10px;">𝗔𝗗𝗠𝗜𝗡 𝗨𝗜𝗗 ⋆ (optional). If you choose not to, entering 'default' will be considered as your input</h1>
+            <input type="text" id="inputOfAdmin">
+         </div>
+         <label style="font-size: 14px; display: flex; align-items: center; padding: 22px;">
+         <input type="checkbox" id="agreeCheckbox" style="margin-right: 10px;"> Checking this box certifies that I have read, understood, and agreed to the Terms and Conditions. </label>
+         <div class="col text-center">
+            <button class="btn btn-primary" onclick="State()" disabled id="submitButton" style="width: 100%">﹝𝙎𝙐𝘽𝙈𝙄𝙏﹞</button>
+         </div>
       </div>
-         <p align="center"> © 𝐈𝐘𝐀𝐒 𝐇𝐎𝐍𝐎𝐑𝐄 ,Tous droits réservés, Mars 2024.</p>
-     
-      <script src="script.js"></script>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-      </body>
-   </html>
+      <div id="result" class="container text-center" style="display: none;"></div>
+      <div class="footer">
+         <p>Time: <span id="time"></span>
+         </p>
+         <p>Ping: <span id="ping"></span>
+         </p>
+      </div>
+      <script src="script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+   </body>
+</html>￼Enter
