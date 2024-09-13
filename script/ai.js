@@ -24,7 +24,7 @@ module.exports.run = async function({
   try {
     const {
       data
-    } = await axios.get(`https://metoushela-rest-api-tp5g.onrender.com/api/gpt4o?query=${encodeURIComponent(input)}`);
+    } = await axios.get('https://deku-rest-api.gleeze.com/blackbox?prompt=${encodeURIComponent(input)}`);
     const response = data.response;
     api.sendMessage('℘༒𝐈𝐘𝐀𝐒 𝐁𝐎𝐓༒℘:\n· · • • • ✤ • • • · ·\n\n' + response + '\n══════◄••❀••►══════\n', event.threadID, event.messageID);
   } catch (error) {
