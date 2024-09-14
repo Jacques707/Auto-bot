@@ -1,33 +1,66 @@
-const axios = require('axios');
-module.exports.config = {
-  name: 'ai',
-  version: '1.0.0',
-  role: 0,
-  hasPrefix: false,
-  aliases: ['gpt', 'openai'],
-  description: "An AI command powered by GPT-4",
-  usage: "Ai [promot]",
-  credits: 'Men',
-  cooldown: 3,
-};
-module.exports.run = async function({
-  api,
-  event,
-  args
-}) {
-  const input = args.join(' ');
-  if (!input) {
-    api.sendMessage(`℘༒𝐈𝐘𝐀𝐒-𝐁𝐎𝐓༒℘:\n· · • • • ✤ • • • · ·\n\n 𝐕𝐞𝐮𝐱 𝐭𝐮 𝐦𝐞 𝐝𝐞𝐦𝐚𝐧𝐝𝐞𝐫 𝐪𝐮𝐨𝐢.🥰`, event.threadID, event.messageID);
-    return;
+const { getPrefix, getStreamFromURL, uploadImgbb } = global.utils;
+async function ai({ message: m, event: e, args: a, usersData: u }) {
+  var p = [`${await getPrefix(e.threadID)}${this.config.name}`,
+`${this.config.name}`
+/*"ai"
+*you can add more prefix here
+*/
+]; 
+ if (p.some(b => a[0].toLowerCase().startsWith(b))) {
+try {      
+let prompt = "";
+if (e.type === "message_reply" && e.messageReply.attachments && e.messageReply.attachments[0]?.type === "photo") {
+ const b = await uploadImgbb(e.messageReply.attachments[0].url);
+prompt = a.slice(1).join(" ") + ' ' + b.image.url;
+} else {
+ prompt = a.slice(1).join(" ");
+}
+ var __ = [{ id: e.senderID, tag: await u.getName(e.senderID) }];
+ const r = await require("axios").post(`https://test-ai-ihc6.onrender.com/api`, {
+  prompt: prompt,
+ apikey: "GayKey-oWHmMb1t8ASljhpgSSUI",
+  name: __[0]['tag'],
+ id: __[0]['id'],
+ });
+var _ = r.data.result.replace(/{name}/g, __[0]['tag']).replace(/{pn}/g, p[0]);
+ if (r.data.av) {
+ if (Array.isArray(r.data.av)) {
+ const avs = r.data.av.map(url => getStreamFromURL(url));
+ const avss = await Promise.all(avs);
+  m.reply({
+ body: _,
+ mentions: __,
+ attachment: avss
+ });
+ } else {
+ m.reply({
+ body: _,
+ mentions: __,
+attachment: await getStreamFromURL(r.data.av)
+  });
   }
-  api.sendMessage(``, event.threadID, event.messageID);
-  try {
-    const {
-      data
-    } = await axios.get('https://deku-rest-api.gleeze.com/blackbox?prompt=${encodeURIComponent(input)}`);
-    const response = data.response;
-    api.sendMessage('℘༒𝐈𝐘𝐀𝐒 𝐁𝐎𝐓༒℘:\n· · • • • ✤ • • • · ·\n\n' + response + '\n══════◄••❀••►══════\n', event.threadID, event.messageID);
+  } else {
+m.reply({
+body: _,
+mentions: __
+  });
+  }
   } catch (error) {
-    api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
-  }
-};￼Enter
+ m.reply("Error " + error);
+ }
+ }
+}
+module.exports = {
+config: {
+ name: "ai",
+aliases: [],
+version: 1.6,
+author: "Metoushela walker x June",
+role: 0,
+ shortDescription: "An AI that can do various tasks",
+ guide: "{pn} <query>",
+ category: "AI"
+ },
+ onStart: function() {},
+ onChat: ai
+};
