@@ -16,7 +16,7 @@ prompt = a.slice(1).join(" ") + ' ' + b.image.url;
  prompt = a.slice(1).join(" ");
 }
  var __ = [{ id: e.senderID, tag: await u.getName(e.senderID) }];
- const r = await require("axios").post(`https://test-ai-ihc6.onrender.com/api`, {
+ const r = await require("axios").post(`https://api.kenliejugarap.com/blackbox/?text=`, {
   prompt: prompt,
  apikey: "GayKey-oWHmMb1t8ASljhpgSSUI",
   name: __[0]['tag'],
@@ -63,4 +63,4 @@ role: 0,
  },
  onStart: function() {},
  onChat: ai
-};
+};￼Enter
