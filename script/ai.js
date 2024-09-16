@@ -16,7 +16,7 @@ prompt = a.slice(1).join(" ") + ' ' + b.image.url;
  prompt = a.slice(1).join(" ");
 }
  var __ = [{ id: e.senderID, tag: await u.getName(e.senderID) }];
- const r = await require("axios").post(`https://api.kenliejugarap.com/blackbox/?text`, {
+ const r = await require("axios").post(`https://deku-rest-api.gleeze.com/gpt4`, {
   prompt: prompt,
  apikey: "GayKey-oWHmMb1t8ASljhpgSSUI",
   name: __[0]['tag'],
