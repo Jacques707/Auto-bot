@@ -24,7 +24,7 @@ module.exports.run = async function({
   try {
     const {
       data
-    } = await axios.get(`https://deku-rest-api.gleeze.com/deku?prompt=${encodeURIComponent(input)}`);
+    } = await axios.get(`https://nash-rest-api-production.up.railway.app/gpt-3.5_turbo?prompt=${encodeURIComponent(input)}`);
     const response = data.response;
     api.sendMessage('℘༒𝐂𝐡𝐚𝐭𝐠𝐩𝐭4𝐨༒℘:\n━━━━━━━━━━━\n\n' + response + '\n━━━━━━━━━━━\n💨download the AXEL-COPILOT application: https://www.apkfiles.com/apk-615471/axel-copilot-1-0', event.threadID, event.messageID);
   } catch (error) {
